@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaCode, FaLaptopCode } from 'react-icons/fa';
 
 const Nav = styled.nav`
   position: fixed;
@@ -25,10 +25,33 @@ const NavContainer = styled.div`
 `;
 
 const Logo = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: #3b82f6;
   cursor: pointer;
+  
+  .logo-icon {
+    font-size: 1.8rem;
+    color: #3b82f6;
+  }
+  
+  .logo-text {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+  }
+  
+  &:hover {
+    .logo-icon {
+      transform: rotate(5deg);
+      transition: transform 0.3s ease;
+    }
+  }
 `;
 
 const NavLinks = styled.div`
@@ -128,7 +151,8 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
           onClick={() => scrollToSection('hero')}
         >
-          Reda
+          <FaLaptopCode className="logo-icon" />
+          <span className="logo-text">Reda</span>
         </Logo>
 
         <NavLinks>

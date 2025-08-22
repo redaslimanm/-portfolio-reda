@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaArrowDown } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaArrowDown, FaCode, FaLaptopCode, FaTerminal } from 'react-icons/fa';
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -32,9 +32,44 @@ const Name = styled(motion.h1)`
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo-icon {
+    font-size: 3rem;
+    color: #3b82f6;
+    animation: pulse 2s infinite;
+  }
+  
+  .logo-text {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
   
   @media (max-width: 768px) {
     font-size: 2.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+    .logo-icon {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -178,7 +213,11 @@ const Hero = ({ profile }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {profile?.name || 'Reda'}
+          <div className="logo-container">
+            <FaCode className="logo-icon" />
+            <span className="logo-text">{profile?.name || 'Reda'}</span>
+            <FaTerminal className="logo-icon" />
+          </div>
         </Name>
         
         <Title
