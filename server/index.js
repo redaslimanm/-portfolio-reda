@@ -26,7 +26,7 @@ app.get('/api/profile', (req, res) => {
     name: 'Reda',
     title: 'Développeur & Programmeur',
     description: 'Passionné par le développement web et les nouvelles technologies',
-    email: 'reda@example.com',
+    email: 'slimanireda87@gmail.com',
     location: 'Maroc',
     skills: [
       'JavaScript', 'React', 'Node.js', 'Python', 'Java', 'SQL',
