@@ -308,7 +308,7 @@ const Contact = () => {
               <FaEnvelope className="icon" />
               <div className="content">
                 <h4>Email</h4>
-                <a href="mailto:reda@example.com">reda@example.com</a>
+                <a href="mailto:slimanireda87@gmail.com">slimanireda87@gmail.com</a>
               </div>
             </ContactItem>
             
@@ -316,7 +316,7 @@ const Contact = () => {
               <FaPhone className="icon" />
               <div className="content">
                 <h4>Téléphone</h4>
-                <a href="tel:+212600000000">+212 6 00 00 00 00</a>
+                <a href="tel:+212675948699">+212 6 75 94 86 99</a>
               </div>
             </ContactItem>
             

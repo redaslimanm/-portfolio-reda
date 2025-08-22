@@ -102,7 +102,7 @@ app.post('/api/contact', async (req, res) => {
     
     const mailOptions = {
       from: email,
-      to: 'reda@example.com',
+      to: 'slimanireda87@gmail.com',
       subject: `Nouveau message de ${name}`,
       text: message,
       html: `
