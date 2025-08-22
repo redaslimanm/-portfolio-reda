@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-reda",
+  "description": "Portfolio professionnel - Développeur et Programmeur",
+  "repository": "https://github.com/yourusername/portfolio-reda",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "react", "portfolio"],
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment variable",
+      "value": "production"
+    },
+    "PORT": {
+      "description": "Port on which the app will run",
+      "value": "5000"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
